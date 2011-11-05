@@ -1,4 +1,6 @@
 " call pathogen#infect()
+let g:pathogen_disabled = []
+call add(g:pathogen_disabled, 'jslint')
 call pathogen#runtime_append_all_bundles()
 syntax on
 set noswapfile
