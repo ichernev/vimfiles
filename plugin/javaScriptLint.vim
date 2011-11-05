@@ -12,7 +12,8 @@
 " Last Modified: May 5, 2009
 
 if !exists("g:jslint_enabled")
-  let g:jslint_enabled = 1
+  " Disable by default. This script is full of crap.
+  let g:jslint_enabled = 0
 endif
 
 if !exists("jslint_command")
@@ -48,8 +49,9 @@ function! JavascriptLint()
   " if some warnings were found, we process them
   if strlen(cmd_output) > 0
 
-    " ensure proper error format
-    let s:errorformat = "%f(%l):\%m^M"
+    " ensure proper error format -- this is useless
+    " let s:errorformat = "%f(%l):\ %m"
+    " let s:errorformat = "%f\ %l\ %m"
 
     " write quickfix errors to a temp file 
     let quickfix_tmpfile_name = tempname()

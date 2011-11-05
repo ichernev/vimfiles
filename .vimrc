@@ -47,7 +47,7 @@ set laststatus=2    " always show status line
 " nmap  <M-k>         <C-W><Up>
 " map! <Home>  g_
 " map! <End>   g$
-nmap <C-a>  :%y+<Return>
+" nmap <C-a>  :%y+<Return>
 set spelllang=bg,en_us
 set nospell
 set wildmode=longest:full
@@ -56,6 +56,9 @@ set wildmenu
 nnoremap <Leader>o :CommandT<CR>
 " This should be recursive, because <Plug>TaskList is a mapping also
 nmap <Leader>t <Plug>TaskList
+nmap <Leader>u :GundoToggle<CR>
+nmap <Leader>a :%y+<Return>
+nmap <silent> <Leader>x /,,,<CR>
 
 
 " highlight whitespace
@@ -69,7 +72,7 @@ nmap <Leader>t <Plug>TaskList
 " au FileType python compiler pylint
 " let g:pylint_onwrite = 0
 
-" au FileType javascript set nocindent
+au FileType javascript set nocindent
 " au FileType sass set sw=4
 
 "" Toggle encodings -- I don't need this, because of fileencodings option set
