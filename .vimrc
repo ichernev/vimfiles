@@ -63,6 +63,9 @@ nmap <silent> <Leader>x /,,,<CR>
 " Java Script linting
 " au BufWritePost *.js cexpr system('runjslint.js ' . expand("%"))
 
+" coffee-script
+let coffee_make_options = '--lint' " lint resulting js
+
 " highlight whitespace
 " highlight ExtraWhitespace ctermbg=red guibg=red
 " au ColorScheme * highlight ExtraWhitespace guibg=red
