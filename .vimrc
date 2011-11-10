@@ -60,6 +60,8 @@ nmap <Leader>u :GundoToggle<CR>
 nmap <Leader>a :%y+<Return>
 nmap <silent> <Leader>x /,,,<CR>
 
+" Java Script linting
+" au BufWritePost *.js cexpr system('runjslint.js ' . expand("%"))
 
 " highlight whitespace
 " highlight ExtraWhitespace ctermbg=red guibg=red
