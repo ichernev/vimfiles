@@ -96,3 +96,10 @@ au FileType javascript set nocindent
 "   endif
 " endf
 " nmap <F8> :call ChangeFileencoding()<CR>
+
+function! ToggleSearchCase()
+  set ignorecase!
+  set smartcase!
+endf
+
+nmap ss :call ToggleSearchCase()<CR>
