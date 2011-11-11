@@ -61,7 +61,17 @@ nmap <Leader>a :%y+<Return>
 nmap <silent> <Leader>x /,,,<CR>
 
 " Java Script linting
-" au BufWritePost *.js cexpr system('runjslint.js ' . expand("%"))
+function! JsLint()
+  " call system('jslint --config ' . expand('$HOME/.jslint.json') .
+  "       \expand("%") . ' | tee /tmp/linting | /dev/null')
+  " cfile '/tmp/linting'
+  cgetexpr system(printf('jslint --config %s %s', 
+        \expand('$HOME/.jslint.json'), expand('%')))
+endf
+augroup jslint
+  au!
+  au BufWritePost *.js call JsLint()
+augroup END
 
 " Quickfix stuff
 nnoremap <c-e>j :cn<CR>
