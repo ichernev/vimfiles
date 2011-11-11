@@ -63,6 +63,11 @@ nmap <silent> <Leader>x /,,,<CR>
 " Java Script linting
 " au BufWritePost *.js cexpr system('runjslint.js ' . expand("%"))
 
+" Quickfix stuff
+nnoremap <c-e>j :cn<CR>
+nnoremap <c-e>k :cp<CR>
+nnoremap <c-e>t :QFix<CR>
+
 " coffee-script
 let coffee_make_options = '--lint' " lint resulting js
 
