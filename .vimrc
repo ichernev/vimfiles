@@ -54,6 +54,7 @@ set wildmode=longest:full
 set wildmenu
 
 nnoremap <Leader>o :CommandT<CR>
+nnoremap <Leader>O :tabnew<CR>:CommandT<CR>
 " This should be recursive, because <Plug>TaskList is a mapping also
 nmap <Leader>t <Plug>TaskList
 nmap <Leader>u :GundoToggle<CR>
