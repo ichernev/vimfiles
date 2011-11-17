@@ -19,7 +19,7 @@ set sw=2
 set sts=2
 set expandtab
 color elflord
-set keymap=bulgarian-phonetic
+set keymap=bulgarian-phonetic-simple
 set iminsert=0
 set imsearch=-1
 set mousefocus     " focus follows mouse
