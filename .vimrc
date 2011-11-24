@@ -53,6 +53,9 @@ set nospell
 set wildmode=longest:full
 set wildmenu
 
+set wildignore+=*.o   " object files
+set wildignore+=*.pyc " python bytecode
+
 nnoremap <Leader>o :CommandT<CR>
 nnoremap <Leader>O :tabnew<CR>:CommandT<CR>
 " This should be recursive, because <Plug>TaskList is a mapping also
