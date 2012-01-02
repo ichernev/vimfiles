@@ -33,8 +33,20 @@ if has('gui_running')
 endif
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set laststatus=2    " always show status line
-":au BufWinEnter * let w:m1=matchadd('Search', '\%<81v.\%>77v', -1)
-":au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+set grepprg=xgrep
+
+nmap <Leader>ll :call ToggleLongLines()<CR>
+hi ColorColumn ctermbg=blue guibg=cyan
+
+function! ToggleLongLines() 
+  if strlen(&colorcolumn) == 0
+    set colorcolumn=81
+  else
+    set colorcolumn=
+  endif
+endf
+
+" command SudoWrite :w !sudo dd of=%
 
 " nmap <Up>    gk
 " nmap <Down>  gj
@@ -63,6 +75,11 @@ nmap <Leader>t <Plug>TaskList
 nmap <Leader>u :GundoToggle<CR>
 nmap <Leader>a :%y+<Return>
 nmap <silent> <Leader>x /,,,<CR>
+nmap <Leader>hb /[а-яА-Я]<CR>
+
+" tab actions
+nmap <Leader>tp :tabprevious<CR>
+nmap <Leader>tn :tabnext<CR>
 
 " Java Script linting
 function! JsLint()
