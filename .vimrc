@@ -68,18 +68,18 @@ set wildmenu
 set wildignore+=*.o   " object files
 set wildignore+=*.pyc " python bytecode
 
+" CommandT
+nnoremap <F5> :CommandTFlush<CR>
 nnoremap <Leader>o :CommandT<CR>
 nnoremap <Leader>O :tabnew<CR>:CommandT<CR>
+nnoremap <Leader>d :CommandT %:h<CR>
+
 " This should be recursive, because <Plug>TaskList is a mapping also
 nmap <Leader>t <Plug>TaskList
 nmap <Leader>u :GundoToggle<CR>
 nmap <Leader>a :%y+<Return>
 nmap <silent> <Leader>x /,,,<CR>
 nmap <Leader>hb /[а-яА-Я]<CR>
-
-" tab actions
-nmap <Leader>tp :tabprevious<CR>
-nmap <Leader>tn :tabnext<CR>
 
 " Java Script linting
 function! JsLint()
@@ -98,6 +98,14 @@ augroup END
 nnoremap <c-e>j :cn<CR>
 nnoremap <c-e>k :cp<CR>
 nnoremap <c-e>t :QFix<CR>
+
+" Nerd tree
+map gn :NERDTreeToggle<CR>
+
+" Andrew movement
+map J 5j
+map K 5k
+map <Leader>j :join<CR>
 
 " coffee-script
 let coffee_make_options = '--lint' " lint resulting js
