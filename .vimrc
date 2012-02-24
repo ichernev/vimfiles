@@ -147,3 +147,18 @@ function! ToggleSearchCase()
 endf
 
 nmap ss :call ToggleSearchCase()<CR>
+
+" Smart words
+nmap w  <Plug>(smartword-w)
+nmap b  <Plug>(smartword-b)
+nmap e  <Plug>(smartword-e)
+nmap ge <Plug>(smartword-ge)
+
+xmap w  <Plug>(smartword-w)
+xmap b  <Plug>(smartword-b)
+xmap e  <Plug>(smartword-e)
+xmap ge <Plug>(smartword-ge)
+
+nnoremap cw cw
+nnoremap dw dw
+nnoremap yw yw
