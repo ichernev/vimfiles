@@ -107,6 +107,9 @@ map J 5j
 map K 5k
 map <Leader>j :join<CR>
 
+set foldmethod=indent
+set nofoldenable
+
 " coffee-script
 let coffee_make_options = '--lint' " lint resulting js
 
@@ -147,6 +150,28 @@ function! ToggleSearchCase()
 endf
 
 nmap ss :call ToggleSearchCase()<CR>
+
+" Preview stuff
+function! PreviewHelper()
+  if exists('b:original_buffer')
+    let buffer = bufwinnr(b:original_buffer)
+    quit
+    exe buffer.'wincmd w'
+  else
+    if bufwinnr(b:preview_file) < 0
+      Preview
+    endif
+
+    call s:SwitchWindow(b:preview_file)
+  endif
+endfunction
+
+nmap gp :call PreviewHelper()<CR>
+
+function! s:SwitchWindow(bufname)
+  let window = bufwinnr(a:bufname)
+  exe window.'wincmd w'
+endfunction
 
 " Smart words
 nmap w  <Plug>(smartword-w)
