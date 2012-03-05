@@ -97,7 +97,7 @@ augroup END
 " Quickfix stuff
 nnoremap <c-e>j :cn<CR>
 nnoremap <c-e>k :cp<CR>
-nnoremap <c-e>t :QFix<CR>
+nmap <c-e>t <Plug>ToggleQf
 
 " Nerd tree
 map gn :NERDTreeToggle<CR>
