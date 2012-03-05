@@ -1,0 +1,2 @@
+set autoindent
+set indentexpr=
