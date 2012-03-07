@@ -150,6 +150,9 @@ function! ToggleSearchCase()
 endf
 
 nmap ss :call ToggleSearchCase()<CR>
+nmap s' cs"'
+nmap s" cs'"
+nmap sd( ds(i <Esc>
 
 " Preview stuff
 function! PreviewHelper()
