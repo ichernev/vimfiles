@@ -190,3 +190,7 @@ xmap ge <Plug>(smartword-ge)
 nnoremap cw cw
 nnoremap dw dw
 nnoremap yw yw
+
+" J/K work as usual in nerd tree
+let g:NERDTreeMapJumpFirstChild = '-'
+let g:NERDTreeMapJumpLastChild  = '-'
