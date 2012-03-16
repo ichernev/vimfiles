@@ -111,7 +111,7 @@ set foldmethod=indent
 set nofoldenable
 
 " coffee-script
-let coffee_make_options = '--lint' " lint resulting js
+" let coffee_make_options = '--lint' " lint resulting js
 
 " highlight whitespace
 " highlight ExtraWhitespace ctermbg=red guibg=red
