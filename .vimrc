@@ -95,6 +95,37 @@ map J 5j
 map K 5k
 map <Leader>j :join<CR>
 
+" Move visual instead of actual lines
+nnoremap j gj
+nnoremap k gk
+xnoremap j gj
+xnoremap k gk
+
+" Buffer movement
+nmap gh <C-w>h
+nmap gj <C-w>j
+nmap gk <C-w>k
+nmap gl <C-w>l
+
+" Tab movement
+nmap <C-l> gt
+nmap <C-h> gT
+
+" Close tab
+nnoremap QQ :QuitTab<cr>
+command! QuitTab call s:QuitTab()
+function! s:QuitTab()
+  try
+    tabclose
+  catch /E784/ " Can't close last tab
+    qall
+  endtry
+endfunction
+
+" Very magic searches
+nnoremap g/ /\v
+nnoremap g? ?\v
+
 set foldmethod=indent
 set nofoldenable
 
