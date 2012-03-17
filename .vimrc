@@ -112,7 +112,6 @@ set nofoldenable
 " au FileType python compiler pylint
 " let g:pylint_onwrite = 0
 
-au FileType javascript set nocindent
 " au FileType sass set sw=4
 
 function! ToggleSearchCase()
