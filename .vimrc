@@ -48,18 +48,6 @@ endf
 
 " command SudoWrite :w !sudo dd of=%
 
-" nmap <Up>    gk
-" nmap <Down>  gj
-" imap <Up>    <Esc>gka
-" imap <Down>  <Esc>gja
-" Move between windows in one click
-" nmap  <M-l>         <C-W><Right>
-" nmap  <M-h>         <C-W><Left>
-" nmap  <M-j>         <C-W><Down>
-" nmap  <M-k>         <C-W><Up>
-" map! <Home>  g_
-" map! <End>   g$
-" nmap <C-a>  :%y+<Return>
 set spelllang=bg,en_us
 set nospell
 set wildmode=longest:full
@@ -126,23 +114,6 @@ set nofoldenable
 
 au FileType javascript set nocindent
 " au FileType sass set sw=4
-
-"" Toggle encodings -- I don't need this, because of fileencodings option set
-"" at the top.
-" function! ChangeFileencoding()
-"   let encodings = ['cp1251', 'koi8-u', 'cp866']
-"   let prompt_encs = []
-"   let index = 0
-"   while index < len(encodings)
-"     call add(prompt_encs, index.'. '.encodings[index])
-"     let index = index + 1
-"   endwhile
-"   let choice = inputlist(prompt_encs)
-"   if choice >= 0 && choice < len(encodings)
-"     execute 'e ++enc='.encodings[choice].' %:p'
-"   endif
-" endf
-" nmap <F8> :call ChangeFileencoding()<CR>
 
 function! ToggleSearchCase()
   set ignorecase!
