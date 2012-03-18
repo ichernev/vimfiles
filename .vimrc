@@ -132,12 +132,7 @@ set nofoldenable
 " coffee-script
 " let coffee_make_options = '--lint' " lint resulting js
 
-" highlight whitespace
-" highlight ExtraWhitespace ctermbg=red guibg=red
-" au ColorScheme * highlight ExtraWhitespace guibg=red
-" au BufEnter * match ExtraWhitespace /\s\+$/
-" au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-" au InsertLeave * match ExtraWhiteSpace /\s\+$/
+autocmd BufWritePre * :%s/\s\+$//e
 
 " pylint
 " au FileType python compiler pylint
