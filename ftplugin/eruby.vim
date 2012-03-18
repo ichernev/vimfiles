@@ -1,2 +1,0 @@
-set autoindent
-set indentexpr=
