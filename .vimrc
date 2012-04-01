@@ -38,7 +38,7 @@ set grepprg=xgrep
 nmap <Leader>ll :call ToggleLongLines()<CR>
 hi ColorColumn ctermbg=blue guibg=cyan
 
-function! ToggleLongLines() 
+function! ToggleLongLines()
   if strlen(&colorcolumn) == 0
     set colorcolumn=81
   else
@@ -74,7 +74,7 @@ function! JsLint()
   " call system('jslint --config ' . expand('$HOME/.jslint.json') .
   "       \expand("%") . ' | tee /tmp/linting | /dev/null')
   " cfile '/tmp/linting'
-  cgetexpr system(printf('jslint --config %s %s', 
+  cgetexpr system(printf('jslint --config %s %s',
         \expand('$HOME/.jslint.json'), expand('%')))
 endf
 augroup jslint
