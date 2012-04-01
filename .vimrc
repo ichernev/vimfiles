@@ -190,3 +190,7 @@ nnoremap yw yw
 " J/K work as usual in nerd tree
 let g:NERDTreeMapJumpFirstChild = '-'
 let g:NERDTreeMapJumpLastChild  = '-'
+
+" Splitjoin
+nmap sj :SplitjoinSplit<cr>
+nmap sk :SplitjoinJoin<cr>
