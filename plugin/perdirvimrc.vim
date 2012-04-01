@@ -9,7 +9,7 @@
 "
 " This is useful when you want to to set up a specific configuration that
 " is only loaded when you edit files within a certain directory.
-" 
+"
 " Let's look at a common situation. To configure Vim depending on your
 " project, your tree would look like this:
 "
@@ -47,12 +47,12 @@ if (has("win32") || has("gui_win32") || has("gui_win32s") || has("win16") || has
 else
 	" unix
 	let s:dir_separator = '/'
-	let s:vimrc = ['.vim', '.vimrc', '_vimrc', '_vim']
+	let s:vimrc = ['.vimrc-local']
 	let s:unix = 1
 endif
 
 function! LoadVimRes(path)
-	let s:dirlist = split(a:path, s:dir_separator) 
+	let s:dirlist = split(a:path, s:dir_separator)
 	let s:j = 0
 	let s:subdir = []
 	while s:j < len(s:dirlist)
