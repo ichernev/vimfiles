@@ -34,3 +34,6 @@
 [submodule "bundle/cmdline-completion"]
 	path = bundle/cmdline-completion
 	url = https://github.com/vim-scripts/cmdline-completion.git
+[submodule "bundle/camel-case-motion"]
+	path = bundle/camel-case-motion
+	url = https://github.com/bkad/CamelCaseMotion.git
