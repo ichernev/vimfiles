@@ -194,3 +194,12 @@ let g:NERDTreeMapJumpLastChild  = '-'
 " Splitjoin
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
+
+function! CoffeeChangeFunctionTypeHelper(symbol)
+  if a:symbol == '-'
+    return '='
+  else
+    return '-'
+  endif
+endfunction
+nmap = :s/\%#.*\zs[-=]\ze>/\=CoffeeChangeFunctionTypeHelper(submatch(0))/<cr>
