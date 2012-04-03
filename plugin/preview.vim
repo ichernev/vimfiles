@@ -26,6 +26,11 @@ function! SetupPreview(extension, command)
         \ if bufwinnr(b:preview_file) >= 0 |
         \   call UpdatePreview()           |
         \ endif
+  autocmd BufUnload <buffer>
+        \ if bufwinnr(b:preview_file) >= 0      |
+        \   call s:SwitchWindow(b:preview_file) |
+        \   quit                                |
+        \ endif
 endfunction
 
 function! s:InitPreview()
