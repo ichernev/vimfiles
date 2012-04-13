@@ -38,6 +38,12 @@ set grepprg=xgrep
 nmap <Leader>ll :call ToggleLongLines()<CR>
 hi ColorColumn ctermbg=blue guibg=cyan
 
+" Persistent undo
+set undofile
+set undodir=/home/iskren/.vim/undodir
+set undolevels=1000  " maximum number of changes that can be undone
+set undoreload=10000 " maximum number lines to save for undo on a buffer reload
+
 function! ToggleLongLines()
   if strlen(&colorcolumn) == 0
     set colorcolumn=81
