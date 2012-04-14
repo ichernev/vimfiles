@@ -154,7 +154,10 @@ function! ToggleSearchCase()
   set smartcase!
 endf
 
+" search helpers
 nmap ss :call ToggleSearchCase()<CR>
+
+" surround helpers
 nmap s' cs"'
 nmap s" cs'"
 nmap sd( ds(i <Esc>
