@@ -128,6 +128,9 @@ function! s:QuitTab()
   endtry
 endfunction
 
+" a plugin mappings
+nnoremap ga :A<CR>
+
 " Very magic searches
 nnoremap g/ /\v
 nnoremap g? ?\v
