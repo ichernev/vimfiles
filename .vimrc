@@ -18,7 +18,7 @@ set ts=8
 set sw=2
 set sts=2
 set expandtab
-color elflord
+color andrew
 set keymap=bulgarian-phonetic-simple
 set iminsert=0
 set imsearch=-1
@@ -51,6 +51,8 @@ function! ToggleLongLines()
     set colorcolumn=
   endif
 endf
+
+nmap <c-c> :cs find c <cword><CR>
 
 " command SudoWrite :w !sudo dd of=%
 
