@@ -40,3 +40,6 @@
 [submodule "bundle/a"]
 	path = bundle/a
 	url = https://github.com/ichernev/a.vim.git
+[submodule "bundle/ctrlp"]
+	path = bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git

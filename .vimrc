@@ -53,6 +53,8 @@ function! ToggleLongLines()
 endf
 
 nmap <c-c> :cs find c <cword><CR>
+let g:ctrlp_map = '<c-a-p>'
+nmap <c-p> :CtrlPMixed<CR>
 
 " command SudoWrite :w !sudo dd of=%
 
