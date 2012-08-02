@@ -104,6 +104,7 @@ nmap <c-e>t <Plug>ToggleQf
 
 " Nerd tree
 map gn :NERDTreeToggle<CR>
+map gN :NERDTreeFind<CR>
 
 " Andrew movement
 map J 5j
