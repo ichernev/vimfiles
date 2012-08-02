@@ -35,6 +35,9 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set laststatus=2    " always show status line
 set grepprg=xgrep
 
+imap <F1> <ESC>
+nmap <F1> <ESC>
+cmap <F1> <ESC>
 nmap <Leader>ll :call ToggleLongLines()<CR>
 hi ColorColumn ctermbg=blue guibg=cyan
 
