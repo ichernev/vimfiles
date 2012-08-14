@@ -35,6 +35,9 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set laststatus=2    " always show status line
 set grepprg=xgrep
 
+" paste in insert mode always honors clipboard indent
+inoremap <c-r> <c-r><c-o>
+
 imap <F1> <ESC>
 nmap <F1> <ESC>
 cmap <F1> <ESC>
