@@ -38,6 +38,11 @@ set grepprg=xgrep
 " paste in insert mode always honors clipboard indent
 inoremap <c-r> <c-r><c-o>
 
+" commentary mappings
+xmap gc <Plug>Commentary
+nmap gc <Plug>Commentary
+nmap gcc <Plug>CommentaryLine
+
 imap <F1> <ESC>
 nmap <F1> <ESC>
 cmap <F1> <ESC>
