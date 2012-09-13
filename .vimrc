@@ -33,6 +33,8 @@ if has('gui_running')
 endif
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set laststatus=2    " always show status line
+set splitbelow      " :split positions the cursor in the bottom buffer
+set splitright      " :vsplit positions the cursor in the right buffer
 set grepprg=xgrep
 
 " paste in insert mode always honors clipboard indent
