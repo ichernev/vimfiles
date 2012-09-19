@@ -121,8 +121,10 @@ map gn :NERDTreeToggle<CR>
 map gN :NERDTreeFind<CR>
 
 " Andrew movement
-map J 5j
-map K 5k
+nnoremap J 5j
+xnoremap J 5j
+nnoremap K 5k
+xnoremap K 5k
 map <Leader>j :join<CR>
 
 " Move visual instead of actual lines
