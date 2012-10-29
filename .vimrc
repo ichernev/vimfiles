@@ -6,6 +6,7 @@ syntax on
 set noswapfile
 set winwidth=80
 set fileencodings=utf-8,cp1251
+set backspace=2     " backspace WORKS, doh!
 "set number
 set autoindent
 set ruler
