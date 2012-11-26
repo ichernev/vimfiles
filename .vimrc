@@ -175,6 +175,8 @@ autocmd BufWritePre * :%s/\s\+$//e
 " let g:pylint_onwrite = 0
 
 " au FileType sass set sw=4
+"
+au FileType c set commentstring=//\ %s
 
 function! ToggleSearchCase()
   set ignorecase!
