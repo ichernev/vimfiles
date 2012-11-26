@@ -90,7 +90,7 @@ nnoremap <Leader>O :tabnew<CR>:CommandT<CR>
 nnoremap <Leader>d :CommandT %:h<CR>
 let g:CommandTMaxHeight=10
 let g:CommandTMinHeight=10
-let g:CommandTMatchWindowReverse=1
+" let g:CommandTMatchWindowReverse=1
 
 " This should be recursive, because <Plug>TaskList is a mapping also
 nmap <Leader>t <Plug>TaskList
