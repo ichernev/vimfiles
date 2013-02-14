@@ -5,6 +5,7 @@ call pathogen#runtime_append_all_bundles()
 syntax on
 set noswapfile
 set winwidth=80
+set textwidth=79
 set fileencodings=utf-8,cp1251
 set backspace=2     " backspace WORKS, doh!
 "set number
