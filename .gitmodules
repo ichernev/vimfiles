@@ -55,3 +55,6 @@
 [submodule "bundle/csv"]
 	path = bundle/csv
 	url = git://github.com/chrisbra/csv.vim.git
+[submodule "bundle/pep8-indent"]
+	path = bundle/pep8-indent
+	url = git://github.com/hynek/vim-python-pep8-indent.git
