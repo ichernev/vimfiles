@@ -52,3 +52,6 @@
 [submodule "bundle/commentary"]
 	path = bundle/commentary
 	url = git://github.com/tpope/vim-commentary.git
+[submodule "bundle/csv"]
+	path = bundle/csv
+	url = git://github.com/chrisbra/csv.vim.git
