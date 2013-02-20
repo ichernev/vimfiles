@@ -113,6 +113,20 @@ augroup jslint
   au BufWritePost *.js call JsLint()
 augroup END
 
+function! Pep8()
+  silent make! | redraw!
+  let error_count = len(getqflist())
+  if error_count == 1
+    echo "got " . error_count . " error"
+  elseif error_count > 1
+    echo "got " . error_count . " errors"
+  endif
+endf
+augroup pep8
+  au!
+  au BufWritePost *.py call Pep8()
+augroup END
+
 " Quickfix stuff
 nnoremap <c-e>j :cn<CR>
 nnoremap <c-e>k :cp<CR>
