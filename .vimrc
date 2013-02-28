@@ -73,6 +73,7 @@ let g:ctrlp_map = '<c-a-p>'
 nmap <c-p> a<c-p>
 au BufRead,BufNewFile *.ino set filetype=cpp
 au BufRead,BufNewFile *.jbuilder set filetype=ruby
+au BufRead,BufNewFile */.hg/patches/* set filetype=diff
 
 " command SudoWrite :w !sudo dd of=%
 
