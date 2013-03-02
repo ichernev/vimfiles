@@ -69,8 +69,8 @@ endf
 
 nmap <c-c> :cs find c <cword><CR>
 let g:ctrlp_map = '<c-a-p>'
-" nmap <c-p> :CtrlPMixed<CR>
-nmap <c-p> a<c-p>
+nmap <c-p> :CtrlPMixed<CR>
+" nmap <c-p> a<c-p>
 au BufRead,BufNewFile *.ino set filetype=cpp
 au BufRead,BufNewFile *.jbuilder set filetype=ruby
 au BufRead,BufNewFile */.hg/patches/* set filetype=diff
