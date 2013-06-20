@@ -102,17 +102,17 @@ nmap <silent> <Leader>x /,,,<CR>
 nmap <Leader>hb /[а-яА-Я]<CR>
 
 " Java Script linting
-function! JsLint()
-  " call system('jslint --config ' . expand('$HOME/.jslint.json') .
-  "       \expand("%") . ' | tee /tmp/linting | /dev/null')
-  " cfile '/tmp/linting'
-  cgetexpr system(printf('jslint --config %s %s',
-        \expand('$HOME/.jslint.json'), expand('%')))
-endf
-augroup jslint
-  au!
-  au BufWritePost *.js call JsLint()
-augroup END
+" function! JsLint()
+"   " call system('jslint --config ' . expand('$HOME/.jslint.json') .
+"   "       \expand("%") . ' | tee /tmp/linting | /dev/null')
+"   " cfile '/tmp/linting'
+"   cgetexpr system(printf('jslint --config %s %s',
+"         \expand('$HOME/.jslint.json'), expand('%')))
+" endf
+" augroup jslint
+"   au!
+"   au BufWritePost *.js call JsLint()
+" augroup END
 
 " Quickfix stuff
 nnoremap <c-e>j :cn<CR>
@@ -179,6 +179,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 " au FileType sass set sw=4
 "
 au FileType c set commentstring=//\ %s
+au BufNewFile,BufRead *.migration set commentstring=--\ %s
 
 function! ToggleSearchCase()
   set ignorecase!
