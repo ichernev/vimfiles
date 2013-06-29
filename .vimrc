@@ -1,7 +1,7 @@
 " call pathogen#infect()
 let g:pathogen_disabled = []
 call add(g:pathogen_disabled, 'jslint')
-call pathogen#runtime_append_all_bundles()
+execute pathogen#infect()
 syntax on
 set noswapfile
 set winwidth=80
