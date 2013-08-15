@@ -70,6 +70,12 @@ endf
 nmap <c-c> :cs find c <cword><CR>
 let g:ctrlp_map = '<c-a-p>'
 nmap <c-p> :CtrlPMixed<CR>
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|node_modules$\|build$',
+  \ 'file': '\.pyc$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 " nmap <c-p> a<c-p>
 au BufRead,BufNewFile *.ino set filetype=cpp
 au BufRead,BufNewFile *.jbuilder set filetype=ruby
