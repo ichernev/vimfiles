@@ -46,9 +46,6 @@
 [submodule "bundle/jshint"]
 	path = bundle/jshint
 	url = git://github.com/walm/jshint.vim.git
-[submodule "bundle/slim"]
-	path = bundle/slim
-	url = git://github.com/bbommarito/vim-slim.git
 [submodule "bundle/commentary"]
 	path = bundle/commentary
 	url = git://github.com/tpope/vim-commentary.git
