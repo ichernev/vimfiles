@@ -13,9 +13,6 @@
 [submodule "bundle/jslint"]
 	path = bundle/jslint
 	url = https://github.com/hallettj/jslint.vim.git
-[submodule "bundle/coffee-script"]
-	path = bundle/coffee-script
-	url = git://github.com/AndrewRadev/vim-coffee-script.git
 [submodule "bundle/json"]
 	path = bundle/json
 	url = https://github.com/leshill/vim-json.git
