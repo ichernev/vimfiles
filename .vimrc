@@ -253,3 +253,5 @@ function! CoffeeChangeFunctionTypeHelper(symbol)
   endif
 endfunction
 nmap = :s/\%#.*\zs[-=]\ze>/\=CoffeeChangeFunctionTypeHelper(submatch(0))/<cr>
+
+let g:pep8_enabled = 0
