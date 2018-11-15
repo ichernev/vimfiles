@@ -17,8 +17,8 @@ set hlsearch
 set incsearch
 filetype plugin indent on
 set ts=8
-set sw=2
-set sts=2
+set sw=4
+set sts=4
 set expandtab
 color andrew
 set keymap=bulgarian-phonetic-simple
@@ -33,11 +33,26 @@ if has('gui_running')
   set guioptions=aci
   set guifont=Monospace\ 10
 endif
+
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set laststatus=2    " always show status line
 set splitbelow      " :split positions the cursor in the bottom buffer
 set splitright      " :vsplit positions the cursor in the right buffer
 set grepprg=xgrep
+
+set breakindent
+set breakindentopt=shift:8,sbr
+set showbreak=>
+
+if has("unix")
+  let s:uname = substitute(system("uname"), '\n\+$', '', '')
+  if s:uname == "Darwin"
+    if has('gui_running')
+      set guifont=Menlo\ Regular:h14
+    endif
+    set grepprg=/Users/iskren/bin/xgrep
+  endif
+endif
 
 " paste in insert mode always honors clipboard indent
 inoremap <c-r> <c-r><c-o>
@@ -80,6 +95,7 @@ let g:ctrlp_custom_ignore = {
 au BufRead,BufNewFile *.ino set filetype=cpp
 au BufRead,BufNewFile *.jbuilder set filetype=ruby
 au BufRead,BufNewFile */.hg/patches/* set filetype=diff
+au BufRead,BufNewFile *.ts set filetype=javascript
 
 " command SudoWrite :w !sudo dd of=%
 
@@ -185,6 +201,7 @@ autocmd BufWritePre * :%s/\s\+$//e
 " au FileType sass set sw=4
 "
 au FileType c set commentstring=//\ %s
+au FileType php set commentstring=//\ %s
 au BufNewFile,BufRead *.migration set commentstring=--\ %s
 
 function! ToggleSearchCase()
@@ -255,3 +272,5 @@ endfunction
 nmap = :s/\%#.*\zs[-=]\ze>/\=CoffeeChangeFunctionTypeHelper(submatch(0))/<cr>
 
 let g:pep8_enabled = 0
+
+au BufNewFile,BufRead *.ejs set filetype=html
