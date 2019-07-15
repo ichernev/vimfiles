@@ -20,7 +20,7 @@ set ts=8
 set sw=4
 set sts=4
 set expandtab
-color andrew
+color slate " was andrew
 set keymap=bulgarian-phonetic-simple
 set iminsert=0
 set imsearch=-1
@@ -31,7 +31,7 @@ set lbr             " word wrap (on word, not screen)
 if has('gui_running')
   " set showtabline=2   " always show tab line
   set guioptions=aci
-  set guifont=Monospace\ 10
+  set guifont=Droid\ Sans\ Mono\ 12
 endif
 
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
@@ -39,6 +39,10 @@ set laststatus=2    " always show status line
 set splitbelow      " :split positions the cursor in the bottom buffer
 set splitright      " :vsplit positions the cursor in the right buffer
 set grepprg=xgrep
+" proper modern indentation
+set breakindent
+set breakindentopt=shift:4,sbr
+set showbreak=>
 
 set breakindent
 set breakindentopt=shift:8,sbr
