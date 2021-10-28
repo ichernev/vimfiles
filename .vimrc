@@ -87,11 +87,12 @@ function! ToggleLongLines()
 endf
 
 nmap <c-c> :cs find c <cword><CR>
-let g:ctrlp_map = '<c-a-p>'
-nmap <c-p> :CtrlPMixed<CR>
-let g:ctrlp_working_path_mode = 0
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPCurWD'
+"  nmap <c-p> :CtrlPCurWD<CR>
+let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|node_modules$\|build$',
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|node_modules$\|build\|.output$',
   \ 'file': '\.pyc$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
@@ -148,6 +149,7 @@ nmap <c-e>t <Plug>ToggleQf
 " Nerd tree
 map gn :NERDTreeToggle<CR>
 map gN :NERDTreeFind<CR>
+let NERDTreeIgnore = ['__pycache__', '\~$']
 
 " Andrew movement
 nnoremap J 5j
@@ -196,6 +198,7 @@ set nofoldenable
 " coffee-script
 " let coffee_make_options = '--lint' " lint resulting js
 
+" remove trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
 
 " pylint
@@ -278,3 +281,6 @@ nmap = :s/\%#.*\zs[-=]\ze>/\=CoffeeChangeFunctionTypeHelper(submatch(0))/<cr>
 let g:pep8_enabled = 0
 
 au BufNewFile,BufRead *.ejs set filetype=html
+
+nmap cpf+ :let @+ = expand("%")<CR>
+nmap cpf* :let @* = expand("%")<CR>
