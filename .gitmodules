@@ -58,3 +58,6 @@
 [submodule "bundle/vala"]
 	path = bundle/vala
 	url = https://github.com/arrufat/vala.vim
+[submodule "bundle/coc"]
+	path = bundle/coc
+	url = https://github.com/neoclide/coc.nvim

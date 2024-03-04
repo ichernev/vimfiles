@@ -1,6 +1,7 @@
 " call pathogen#infect()
 let g:pathogen_disabled = []
 call add(g:pathogen_disabled, 'jslint')
+call add(g:pathogen_disabled, 'coc')
 execute pathogen#infect()
 syntax on
 set noswapfile
@@ -92,7 +93,7 @@ let g:ctrlp_cmd = 'CtrlPCurWD'
 "  nmap <c-p> :CtrlPCurWD<CR>
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|node_modules$\|build\|.output$',
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|node_modules$\|build\|.output$\|^\.venv.*$\|^tmp$\|^\.mypy_cache$',
   \ 'file': '\.pyc$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
@@ -199,7 +200,10 @@ set nofoldenable
 " let coffee_make_options = '--lint' " lint resulting js
 
 " remove trailing whitespace
-autocmd BufWritePre * :%s/\s\+$//e
+augroup trailws
+  au!
+  au BufWritePre * :%s/\s\+$//e
+augroup END
 
 " pylint
 " au FileType python compiler pylint
@@ -284,3 +288,6 @@ au BufNewFile,BufRead *.ejs set filetype=html
 
 nmap cpf+ :let @+ = expand("%")<CR>
 nmap cpf* :let @* = expand("%")<CR>
+let $PATH .= ':/home/iskren/miniconda3/condabin'
+
+let g:xml_syntax_folding = 1

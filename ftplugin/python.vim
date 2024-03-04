@@ -1,1 +1,1 @@
-setlocal makeprg=pep8\ %
+" setlocal makeprg=pep8\ %
